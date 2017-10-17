@@ -1,0 +1,321 @@
+12:17:48 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../src/QUEUE.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/QUEUE.d" -MT"src/QUEUE.d" -o "src/QUEUE.o" "../src/QUEUE.c"
+Finished building: ../src/QUEUE.c
+ 
+Building file: ../src/stack.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/stack.d" -MT"src/stack.d" -o "src/stack.o" "../src/stack.c"
+../src/stack.c:52:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ STACKpush(Item item) {
+ ^
+../src/stack.c: In function ‘STACKpush’:
+../src/stack.c:54:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/stack.c
+ 
+Building target: dataStructure
+Invoking: GCC C Linker
+gcc  -o "dataStructure"  ./src/QUEUE.o ./src/stack.o   -lm
+./src/stack.o: In function `NEW':
+/home/wwwroot/cprogram/dataStructure/Debug/../src/stack.c:24: multiple definition of `NEW'
+./src/QUEUE.o:/home/wwwroot/cprogram/dataStructure/Debug/../src/QUEUE.c:12: first defined here
+makefile:30: recipe for target 'dataStructure' failed
+/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [dataStructure] Error 1
+18:39:33 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../src/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bst.d" -MT"src/bst.d" -o "src/bst.o" "../src/bst.c"
+../src/bst.c: In function ‘STinit’:
+../src/bst.c:30:10: error: ‘NULLitem’ undeclared (first use in this function)
+src/subdir.mk:24: recipe for target 'src/bst.o' failed
+  z = NEW(NULLitem, 0, 0, 0);
+          ^
+../src/bst.c:30:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/bst.c: At top level:
+../src/bst.c:44:14: error: unknown type name ‘Link’
+ Item searchR(Link h, Key v) {
+              ^
+../src/bst.c:44:22: error: unknown type name ‘Key’
+ Item searchR(Link h, Key v) {
+                      ^
+../src/bst.c:51:15: error: unknown type name ‘Key’
+ Item STsearch(Key v) {
+               ^
+../src/bst.c:55:22: error: unknown type name ‘Key’
+ Item searchR(link h, Key v) {
+                      ^
+../src/bst.c: In function ‘insertR’:
+../src/bst.c:72:2: error: unknown type name ‘Key’
+  Key v = key(item);
+  ^
+../src/bst.c:72:10: warning: implicit declaration of function ‘key’ [-Wimplicit-function-declaration]
+  Key v = key(item);
+          ^
+../src/bst.c:73:2: error: unknown type name ‘Key’
+  Key t = key(h->item);
+  ^
+../src/bst.c:74:11: error: ‘zero’ undeclared (first use in this function)
+  if (h == zero)
+           ^
+../src/bst.c:76:5: error: expected ‘(’ before ‘less’
+  if less(v, t) {
+     ^
+../src/bst.c:76:5: warning: implicit declaration of function ‘less’ [-Wimplicit-function-declaration]
+../src/bst.c: In function ‘NEW’:
+../src/bst.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/bst.o] Error 1
+15:55:04 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+make: *** [todo/bst.o] Error 1
+21:35:23 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+compilation terminated.
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+22:03:47 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+22:12:04 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+22:33:22 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+08:51:44 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+08:59:13 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+22:41:59 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+18:28:07 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+18:42:35 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+17:58:21 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:21: recipe for target 'todo/bst.o' failed
+21:28:54 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+todo/subdir.mk:27: recipe for target 'todo/bst.o' failed
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+21:00:20 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+todo/subdir.mk:27: recipe for target 'todo/bst.o' failed
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+11:20:51 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+todo/subdir.mk:27: recipe for target 'todo/bst.o' failed
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+19:19:11 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:27: recipe for target 'todo/bst.o' failed
+20:14:58 **** Build of configuration Default for project TinyHttpd ****
+make all 
+gcc -g -W -Wall -lpthread  -o httpd httpd.c
+httpd.c: In function ‘execute_cgi’:
+httpd.c:282:9: warning: null argument where non-null required (argument 2) [-Wnonnull]
+         execl(path, NULL);
+         ^
+httpd.c:282:9: warning: not enough variable arguments to fit a sentinel [-Wformat=]
+/tmp/cc5RWClS.o: In function `main':
+/home/wwwroot/Tinyhttpd//httpd.c:509: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [httpd] Error 1
+Makefile:4: recipe for target 'httpd' failed
+20:15:00 **** Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+todo/subdir.mk:27: recipe for target 'todo/bst.o' failed
+make: *** [todo/bst.o] Error 1
+17:23:01 **** Build of configuration Default for project TinyHttpd ****
+make all 
+gcc -g -W -Wall -lpthread  -o httpd httpd.c
+httpd.c: In function ‘execute_cgi’:
+httpd.c:282:9: warning: null argument where non-null required (argument 2) [-Wnonnull]
+         execl(path, NULL);
+         ^
+httpd.c:282:9: warning: not enough variable arguments to fit a sentinel [-Wformat=]
+/tmp/ccxCjfn3.o: In function `main':
+/home/wwwroot/Tinyhttpd//httpd.c:509: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [httpd] Error 1
+Makefile:4: recipe for target 'httpd' failed
+17:23:02 **** Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+todo/subdir.mk:27: recipe for target 'todo/bst.o' failed
+make: *** [todo/bst.o] Error 1
+09:31:38 **** Incremental Build of configuration Default for project TinyHttpd ****
+make all 
+gcc -g -W -Wall -lpthread  -o httpd httpd.c
+httpd.c: In function ‘execute_cgi’:
+httpd.c:282:9: warning: null argument where non-null required (argument 2) [-Wnonnull]
+         execl(path, NULL);
+         ^
+httpd.c:282:9: warning: not enough variable arguments to fit a sentinel [-Wformat=]
+/tmp/ccGvsmO1.o: In function `main':
+/home/wwwroot/Tinyhttpd//httpd.c:509: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+Makefile:4: recipe for target 'httpd' failed
+make: *** [httpd] Error 1
+09:31:40 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+todo/subdir.mk:27: recipe for target 'todo/bst.o' failed
+make: *** [todo/bst.o] Error 1
+18:45:02 **** Incremental Build of configuration Default for project TinyHttpd ****
+make all 
+gcc -g -W -Wall -lpthread  -o httpd httpd.c
+httpd.c: In function ‘execute_cgi’:
+httpd.c:282:9: warning: null argument where non-null required (argument 2) [-Wnonnull]
+         execl(path, NULL);
+         ^
+httpd.c:282:9: warning: not enough variable arguments to fit a sentinel [-Wformat=]
+/tmp/cc4jAIZ2.o: In function `main':
+/home/wwwroot/Tinyhttpd//httpd.c:509: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+Makefile:4: recipe for target 'httpd' failed
+make: *** [httpd] Error 1
+18:45:03 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+todo/subdir.mk:27: recipe for target 'todo/bst.o' failed
+make: *** [todo/bst.o] Error 1
+13:02:45 **** Incremental Build of configuration Default for project TinyHttpd ****
+make all 
+gcc -g -W -Wall -lpthread  -o httpd httpd.c
+httpd.c: In function ‘execute_cgi’:
+httpd.c:282:9: warning: null argument where non-null required (argument 2) [-Wnonnull]
+         execl(path, NULL);
+         ^
+httpd.c:282:9: warning: not enough variable arguments to fit a sentinel [-Wformat=]
+/tmp/ccpzxpiQ.o: In function `main':
+/home/wwwroot/Tinyhttpd//httpd.c:509: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+Makefile:4: recipe for target 'httpd' failed
+make: *** [httpd] Error 1
+13:02:46 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:36: recipe for target 'todo/bst.o' failed

@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+#define DEBUG 1
+#ifdef DEBUG
+#define PR  printf
+#else
+#define PR(...)
+#endif
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+
+int main(int argc, char ** argv) {
+
+}
+

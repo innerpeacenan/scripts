@@ -1,0 +1,16 @@
+13:02:45 **** Incremental Build of configuration Default for project TinyHttpd ****
+make all 
+gcc -g -W -Wall -lpthread  -o httpd httpd.c
+httpd.c: In function ‘execute_cgi’:
+httpd.c:282:9: warning: null argument where non-null required (argument 2) [-Wnonnull]
+         execl(path, NULL);
+         ^
+httpd.c:282:9: warning: not enough variable arguments to fit a sentinel [-Wformat=]
+/tmp/ccpzxpiQ.o: In function `main':
+/home/wwwroot/Tinyhttpd//httpd.c:509: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+Makefile:4: recipe for target 'httpd' failed
+make: *** [httpd] Error 1
+
+13:02:46 Build Finished (took 636ms)
+

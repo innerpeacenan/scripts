@@ -1,0 +1,23 @@
+//a stack implement by single linked list
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <assert.h>
+
+/**
+ * 二级指针智能修改一级指针值存在的情况下指针的内容而不许要返回值(也就是引用修改值)
+ * 因此, STACKinit 初始化需要需要返回值
+ */
+int main(int argc, char **argv) {
+	QUEUE queue = QUEUEinit();
+	int item;
+	for (int i = 1; i < argc; i++) {
+		float num = atof(argv[i]);
+		ENQUEUE(queue, num);
+	}
+	travel(queue);
+	for (int i = 1; i < argc; i++) {
+		printf("%d\n", DEQUEUE(queue));
+	}
+}
+

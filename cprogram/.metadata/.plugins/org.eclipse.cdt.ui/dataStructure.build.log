@@ -1,0 +1,12 @@
+13:02:46 **** Incremental Build of configuration Debug for project dataStructure ****
+make all 
+Building file: ../todo/bst.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"todo/bst.d" -MT"todo/bst.d" -o "todo/bst.o" "../todo/bst.c"
+../todo/bst.c:2:18: fatal error: Item.h: No such file or directory
+compilation terminated.
+make: *** [todo/bst.o] Error 1
+todo/subdir.mk:36: recipe for target 'todo/bst.o' failed
+
+13:02:46 Build Finished (took 142ms)
+
