@@ -1,0 +1,5 @@
+steps of reading files
+1. readfile 
+2. bufferReader
+3. call method readLine which return String, then you can do something
+4. close buffer
