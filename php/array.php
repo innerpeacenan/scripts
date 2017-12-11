@@ -286,34 +286,75 @@ DESCRIPTION
                 [
                     0 =>
                         [
-                            'title' => '{',
+                            'title' => '请求示例',
                             'content' => <<<'REQUEST_EXAMPLE_CONTENT'
 {
   "code": 0,
-  "msg": "成功",
   "info": {
-    "buid": 1000081,
-    "name": "北京",
-    "children_ids": [
-      1000129,
-      1000125,
-      1000138,
-      1000206
-    ],
-    "assistants": [
-      "刘诗杨-客服助理-北京1",
-      "刘建闯拓展"
-    ],
-    "members": [
-      "刘诗杨-客服经理-北京1",
-      "刘诗杨-客服经理-北京2",
-      "刘诗杨-客服助理-北京1",
-      "刘诗杨-客服经理-天津1",
-      "wangxue6",
-      "李雅（客服经理）",
-      "刘建闯拓展"
-    ],
-    "created_at": "2015-06-15 15:26:54"
+    "id": 49718552130560,
+    "origin_id": "test-2712040019",
+    "cuid": 4902,
+    "dp_contact_name": "南小宁",
+    "dp_contact_mobile": "18612321634",
+    "dp_backup_mobile": "",
+    "dp_address": "北京 北京市 海淀区颐和园路",
+    "is_important": 0,
+    "is_abnormal": 0,
+    "is_cod": 0,
+    "order_send_day": 1512316800,
+    "dp_rta_start": 1512342000,
+    "dp_rta_end": 1512360000,
+    "dp_longitude": "",
+    "dp_latitude": "",
+    "dp_guide": "",
+    "warehouse_name": "全时",
+    "warehouse_id": 41893,
+    "order_total_price": 757551,
+    "cargo_price": 0,
+    "order_total_weight": 0,
+    "order_total_volume": 3496085,
+    "order_status": 100,
+    "create_time": 1512358441,
+    "update_time": 1512371721,
+    "cancel_reason": "",
+    "cancel_user": "",
+    "area_id": "",
+    "area_name": "",
+    "order_detail": [],
+    "note": "",
+    "customer_name": "杨国奇",
+    "line_time": 1512371721,
+    "complete_longitude": "",
+    "complete_latitude": "",
+    "uarrive_longitude": "",
+    "uarrive_latitude": "",
+    "is_pickup": 0,
+    "order_total_num": 98,
+    "province": "北京",
+    "city": "北京市",
+    "district": "海淀区",
+    "sign_status": 0,
+    "reject_reason": null,
+    "sign_images": [],
+    "sign_code": "",
+    "distri_consts": 0,
+    "send_id": 0,
+    "send_type": 0,
+    "tag": 0,
+    "source": "API接口测试专用",
+    "pay_images": [],
+    "received_money": null,
+    "reduction_reason": null,
+    "payee": null,
+    "receiving_money_time": 0,
+    "received_money_time": 0,
+    "service_charge": null,
+    "reason_code": null,
+    "pay_authority": 0,
+    "is_cost": 0,
+    "is_enabled": 0,
+    "reduction_images": [],
+    "images": []
   }
 }
 REQUEST_EXAMPLE_CONTENT
@@ -327,21 +368,7 @@ REQUEST_EXAMPLE_CONTENT
     'filename' => '',
 ];
 
-$str = json_encode($conf, JSON_UNESCAPED_UNICODE);
-
-try {
-    $file = '/home/wwwroot/scripts/php/jsons/demo.json';
-    $handler = fopen($file, 'w+');
-    fwrite($handler, $str);
-    fclose($handler);
-    $str = file_get_contents('/home/wwwroot/scripts/php/jsons/demo.json');
-    $result = json_decode($str, true);
-    if(is_null($result)){
-        throw new \Exception('写入json文件发生错误');
-    }
-} catch (\Throwable $e) {
-    echo $e->getMessage();
-    exit(1);
-}
+$str = json_encode($conf, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT );
+echo $str;
 
 
