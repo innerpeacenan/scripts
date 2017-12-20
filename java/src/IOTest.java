@@ -5,16 +5,24 @@ public class IOTest
     public static void main(String[] args)
     {
         try {
+            FileWriter fw = new FileWriter("/tmp/output.txt");
+            String longString = "847F2CC2E59EE9CC462FE71CF14AD09carType2cargo家具生活用品等cityCode0755commitIdentifier0contactPhone18923877702destinationAddress广东省深圳市宝安区福永街道和平社区蚝业路33号destinationContact胡先生destinationPhone15900000004orderCodingWQ1712-0000239pickupAddress广东省深圳市宝安区沙井街道万丰社区万丰98工业城第10栋101铺位pickupName黄斌宝安stayTime2tailPlate1trunkRequirement刘庆林测试12111152vendorCodeyunniaovolume5weight2500";
+            fw.write(longString);
+            fw.close();
+            System.exit(0);
+
             String longstr = "847F2CC2E59EE9CC462FE71CF14AD09carType2cargo家具生活用品等cityCode0755commitIdentifier0contactPhone18923877702destinationAddress广东省深圳市宝安区福永街道和平社区蚝业路33号destinationContact胡先生destinationPhone15900000004orderCodingWQ1712-0000239pickupAddress广东省深圳市宝安区沙井街道万丰社区万丰98工业城第10栋101铺位pickupName黄斌宝安stayTime2tailPlate1trunkRequirement刘庆林测试12111152vendorCodeyunniaovolume5weight2500";
             transform(longstr);
             System.exit(0);
 
+            // 重定向标准输出
             OutputStream output = new FileOutputStream("/tmp/xdebug.log");
             PrintStream printOut = new PrintStream(output);
             System.setOut(printOut);
             System.out.println("本来应该输入到 console 的信息,现在被重新定向到了这个文件了");
             System.exit(0);
 
+            // 检查和新建文件
             File file = new File("/tmp/xdebug.log");
             if(file.exists()){
                 System.err.println("file exist!");
@@ -29,9 +37,9 @@ public class IOTest
                 }
             }
 
+            // 写文件
             String data  = "文本内容,可能是爬虫得到的 cookie ";
-            // 构造函数的第二个参数表示是否追加
-            // 要用getAbsolutePath()
+            // 构造函数的第二个参数表示是否追加  要用getAbsolutePath()
             // File, FileWriter, BufferedWriter
             FileWriter fileWriter = new FileWriter(file.getAbsolutePath());
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);

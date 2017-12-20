@@ -22,6 +22,7 @@ public class Cookie {
 
     public static String readCookie() throws IOException
     {
+        // \Z 匹配多行字符串结尾, muliline 模式
         String content = new Scanner(new File("/tmp/xdebug.log")).useDelimiter("\\Z").next();
         return content;
     }
@@ -30,7 +31,6 @@ public class Cookie {
         // 学习javaio 文件读取和保存
         cookies = new HashMap<String, String> ();
         try {
-            // 登录后为什么没有成功设置session呢? 想一想
             // 学习 IO 中的文件存取
             String cvalue = readCookie();
             System.out.println("current cookie is:" + cvalue);
@@ -86,8 +86,7 @@ public class Cookie {
     }
 
     public static void saveCookie (String data) throws IOException {
-        File file = new File("/tmp/xdebug.log");
-        FileWriter fileWriter = new FileWriter(file.getAbsolutePath());
+        FileWriter fileWriter = new FileWriter("/tmp/xdebug");
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         bufferedWriter.write(data);
         bufferedWriter.close();
